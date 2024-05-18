@@ -1,6 +1,7 @@
 # InfluxTempMonitor <br>
 <img align="center" src="https://www.svgrepo.com/show/237418/turkey.svg"  height="30" width="40" />Tr:
-<img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"  height="30" width="40" /></a><br>
+<img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"  height="30" width="40" /></a>
+<img align="center" src="https://github.com/betulbodurrr/InfluxTempMonitor/blob/main/img/influxdb-svgrepo-com.svg"  height="30" width="40" /></a><br>
 
 [InfluxDB Dokümantasyonuna Erişmek için Tıklayınız.](https://docs.influxdata.com/flux/v0/get-started/data-model/) <br> <br>
 Grafana için :http://localhost:3000<br>
@@ -28,7 +29,8 @@ Artık InfluxDB çalışır durumda.http://localhost:8086 ile InfluxDB arayüzü
 
 Projemizi terminal üzerinden çalıştırdığımızda random bir şekilde oluşturulan sıcaklık değerleri önce InfluxDB'ye sonra görselleştirmek için Grafana'ya iletilir ve Grafana'dan da kendi web sitemizde görüntüleriz.<br> <br>
 <img align="center" src="https://www.svgrepo.com/show/365950/usa.svg"  height="20" width="30" />En:
-<img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"  height="30" width="40" /></a><br> 
+<img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"  height="30" width="40" /></a>
+<img align="center" src="https://github.com/betulbodurrr/InfluxTempMonitor/blob/main/img/influxdb-svgrepo-com.svg"  height="30" width="40" /></a><br>
 
 [Click here to access InfluxDB Documentation.](https://docs.influxdata.com/flux/v0/get-started/data-model/) <br> <br>
 For Grafana:http://localhost:3000<br>
