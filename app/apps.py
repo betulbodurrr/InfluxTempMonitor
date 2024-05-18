@@ -19,23 +19,31 @@ class MyAppConfig(AppConfig):
         org = settings.INFLUXDB_CONFIG['org']
         bucket = settings.INFLUXDB_CONFIG['bucket']
 
-        # InfluxDB istemcisini oluşturun
         client = InfluxDBClient(url=url, token=token)
         write_api = client.write_api(write_options=WriteOptions(batch_size=500, flush_interval=10_000))
 
-        # Sıcaklık verisini yazılacak veri noktasına dönüştürün
         point = Point("temperature") \
             .tag("location", "random") \
             .field("value", temperature) \
             .time(datetime.utcnow(), WritePrecision.NS)
 
-        # Veriyi InfluxDB'ye yazın
         write_api.write(bucket=bucket, org=org, record=point)
         client.close()
 
     def generate_temperature(self):
-        while True:
+        while getattr(threading.current_thread(), "do_run", True):
             temperature = random.randint(10, 40)
             print("Sıcaklık değeri:", temperature)
             self.veriKayit(temperature)
             time.sleep(10)
+            
+    def stop_thread(self):
+            if getattr(self, 'temperature_thread', None):
+                self.temperature_thread.do_run = False
+
+    def ready(self):
+        self.temperature_thread = threading.Thread(target=self.generate_temperature)
+        self.temperature_thread.start()
+
+    def shutdown(self):
+         self.stop_thread()     

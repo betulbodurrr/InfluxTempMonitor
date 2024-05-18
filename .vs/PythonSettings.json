@@ -1,4 +1,3 @@
 {
-  "TestFramework": "Pytest",
-  "Interpreter": "env\\Scripts\\python.exe"
+  "TestFramework": "Pytest"
 }

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\InfluxTempMonitor"
   ],
-  "SelectedNode": "\\InfluxTempMonitor.sln",
+  "SelectedNode": "\\app\\ds",
   "PreviewInSolutionExplorer": false
 }
